@@ -1,0 +1,41 @@
+-Tabela u divu 8*13
+
+-Ponistiti razmak izmedju td-ova
+
+-Zadati id za svaki td 
+
+-Dugme za start game (onklick da se figura pocinje da se krece)
+
+-*Div u kome je manja tabela u kojoj se prikazuje Next figura
+
+-Svaka figura je niz koji za elemente ima divove koji se pojavljuju
+ unitar td-ova celije kada kliknemo start game, a prethodno su definisani
+
+
+
+-Zaustavlja se kada se pojavi bar jedan td u kome postoji div a nalazi 
+ se u poslednjem redu tabele(proveriti pomocu id-a od td-a) ili kada td ispod 
+ njega ima div u sebi
+
+-If svaki td iz istog reda tabele ima div u sebi otkloni sve divove iz tog reda
+-a sve divove iz td-ova iz predhodnih redova spustiti red nize
+
+-Polje koje ispisuje poene kada se popuni jedan red
+
+-odabir figure random
+
+
+
+Kretanje figure
+(Za kretanje menjati td-ove u kojima se divovi pojavljuju a prazniti td-ove 
+ na kojima su bili)
+	
+	-prvo pojavljivanje da proveri da li je td (0red ) slobodan, ako nije
+	 "kraj igre"
+	-na dole
+	-na levo
+	-na desno
+	-okretanje
+	-ubrzanje
+
+-Postaviti kretanje levo desno okretanje i ubrzanje na tastere

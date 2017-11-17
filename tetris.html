@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Tetris</title>
+    <style>
+        #poljeZaIgru table{border: solid green 2px; background-color: rgba(164, 233, 198, 0.541)}
+        #poljeZaIgru tr{border: solid green 2px}
+        #poljeZaIgru td{width: 15px; height: 15px; }
+       /** #next table{border: solid black 1px;}
+        #next tr{border: solid black 1px}
+        #next td{width: 5px; height: 5px; border: solid black 1px} **/
+
+        td div{width: 15px; height:15px; background-color: rgb(41, 58, 41)}
+    
+    </style>
+</head>
+<body>
+    <div id="poljeZaIgru"></div>
+  <!--  <div id="next"></div> ov je div za Next polje --> 
+    <script>
+        var tabela="<table>";   
+        for (var red=0; red<13; red++)
+        {
+            tabela+="<tr>";
+            for(var polje=0; polje<8; polje++)
+            {
+                tabela+="<td id="+red+polje+"></td>";
+            }
+            tabela+="</tr>";
+        }
+        tabela+="</table>"
+        document.getElementById("poljeZaIgru").innerHTML=tabela;
+
+        var figura1=[[-1,3],[-2,3],[-3,3],[-4,3]];//kad povecamo 0 poziciju 0 niza za 1 dobicemo 0,3
+        // sto je id prvog polja gde treba da nam se pojavi prvi kvadratic figure odnosno prvi div
+          
+          
+           // na start game treba da pocne
+        
+        var kvadratic="<div></div>"// div sa tamnom pozadinom
+
+        for(var i=figura1[0][0]; i<12; i++) 
+        {
+            setInterval(function()
+            { 
+                figura1[0][0]++;
+                var stringId=""+figura1[0][0]+figura1[0][1];//spajamo 0. i 1.element svakog niza
+                    // da dobijemo string recimo 03 13 23...koji se poklapaju sa id-em od td-a 
+
+                switch (figura1[0][0])
+                {
+                case 0:
+                    document.getElementById(stringId).innerHTML=kvadratic;//ubacujemo div sa pozadinom u td koji ima id kao stringId
+                    break;
+                case 1:
+                    document.getElementById(stringId).innerHTML=kvadratic;
+                    break;
+                case 2:
+                    document.getElementById(stringId).innerHTML=kvadratic;
+                    break;
+                case 3:
+                    document.getElementById(stringId).innerHTML=kvadratic;
+                    break;
+                case 4:
+                   
+                } 
+            },500);              
+
+                //console.log(figura1[0][0]);
+                //console.log(figura1);                      
+                console.log(stringId);
+            } 
+
+
+
+           
+
+                /** ovo sam pokusala da ispraznim predhodne kad popuni 4 polja ali nece
+                if(i<3)
+                {
+                         figura1[0][0]++;
+                                     
+                    var stringId=figura1[0][0]+""+figura1[0][1]; 
+                   
+                    console.log(stringId); 
+                    document.getElementById(stringId).innerHTML=kvadratic;//ubacujemo div sa pozadinom u
+                }
+                else
+                {
+                    if(i<6)
+                    {
+                        if(stringId<3)
+                        {
+                            document.getElementById(stringId).innerHTML="";
+                        }
+                    }
+                    if(i<9)
+                    {
+                        if(stringId<6)
+                        {
+                            document.getElementById(stringId).innerHTML=kvadratic;
+                        }
+                    }
+                    if(i<12)
+                    {
+                        if(stringId<6)
+                        {
+                            document.getElementById(stringId).innerHTML="";
+                        }
+                    }
+                    
+
+
+                }
+                
+            }**/
+
+        
+
+                     
+           
+           
+               
+
+                
+        
+       /** var tabelaNext="<table>";
+        for (var red=-4; red<0; red++)
+        {
+            tabelaNext+="<tr>";
+            for(polje=0; polje<8; polje++)
+            {
+                tabelaNext+="<td id="+red+polje+"></td>"
+            }
+            tabelaNext+="</tr>";
+        }
+        tabela+="</table>";
+        document.getElementById("next").innerHTML=tabelaNext;**/
+
+            
+
+
+    
+    </script>
+    
+    
+</body>
+</html>
